@@ -22,14 +22,14 @@ public class MainMenu extends JFrame{
                 menu.setVisible(false);
                 TetrisExample.main(args);
             }
-        });
+        });//End of eTetris Listener
         JButton myGame = new JButton("Mike's Simple Tetris");
         myGame.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(null, "Under Construction", "Error", JOptionPane.ERROR_MESSAGE);
             }
-        });
+        });//End of myGame Listener
 
         menu.add(eTetris);
         menu.add(myGame);
@@ -37,5 +37,5 @@ public class MainMenu extends JFrame{
 
 
 
-    }
+    }//End of main method
 }//End of MainMenu Class

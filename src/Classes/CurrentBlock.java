@@ -1,6 +1,8 @@
 package Classes;
 
-public abstract class Blocks {
+import java.awt.*;
+
+public abstract class CurrentBlock {
 
     //Attributes
     private float [] size = new float[2];
@@ -19,10 +21,10 @@ public abstract class Blocks {
     public float[] getSize() { return size; }
 
     //No argument constructor
-    public Blocks() { this(null); }
+    public CurrentBlock() { this(null); }
 
     //1 argument constructor
-    public Blocks(float[] size)
+    public CurrentBlock(float[] size)
     {
         setSize(size);
         setBlockType();
