@@ -27,7 +27,8 @@ public class MainMenu extends JFrame{
         myGame.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "Under Construction", "Error", JOptionPane.ERROR_MESSAGE);
+                menu.setVisible(false);
+                MainGame.main(args);
             }
         });//End of myGame Listener
 

@@ -2,98 +2,13 @@ package Classes;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 public class Arena extends JPanel{
 
-    JFrame gameArena = new JFrame("Simple Tetris");
-    int currentX = 4, currentY = 0;
-
-    public static void main(String[] args)
-    {
-        JFrame gameArena = new JFrame("Simple Tetris");
-        //gameArena.setLayout(new GridLayout(12,7));
-        gameArena.setSize(510,698);
-        gameArena.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gameArena.setVisible(true);
-
-        /*for(int i = 0; i < 10; i++)
-        {
-            for(int j = 0; j < 22; j++)
-            {
-                grid[j][i] = new JButton();
-                gameArena.add(grid[j][i]);
-            }
-        }
-        JButton[][] grid = new JButton[30][30];
-        gameArena.pack();*/
-
-        Arena game = new Arena();
-        game.Wall();
-        gameArena.add(game);
-
-        Timer gameTime = new Timer(1000, null);
-
-        gameArena.addKeyListener(new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                if(e.getKeyCode() == KeyEvent.VK_E)
-                {
-                    gameTime.start();
-                    System.out.print("Works \n");
-                    game.dropTheBlock();
-                }
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-
-            }
-        });
-    }//End of main method
-
-    private void dropTheBlock() {
-        Color setColor;
-
-        if(wallOfArena[currentX][currentY] == Color.BLUE)
-        {
-            setColor = Color.BLUE;
-            System.out.print("Blue\n");
-        }
-        else if(wallOfArena[currentX][currentY] == Color.GREEN)
-        {
-            setColor = Color.GREEN;
-            System.out.print("Green\n");
-        }
-        else if(wallOfArena[currentX][currentY] == Color.RED)
-        {
-            setColor = Color.RED;
-            System.out.print("Red\n");
-        }
-        else
-        {
-            setColor = Color.GRAY;
-            System.out.print("Error\n");
-        }
-
-        wallOfArena[currentX][currentY] = Color.BLACK;
-        currentX = 5;
-        currentY = 6;
-        wallOfArena[currentX][currentY] = setColor;
-        System.out.print("Is working\n");
-    }
-
     private Color[][] wallOfArena = new Color[9][12];
+    private int currentX, currentY;
 
-    private void Wall()
+    public void Wall()
     {
         for(int j = 0; j < 12; j++) {
             for(int i = 0; i < 9; i++) {
@@ -114,6 +29,11 @@ public class Arena extends JPanel{
                 }
             }
         }
+    }//End of Wall Method
+
+    public void setCurrent(int currentX, int currentY)
+    {
+        System.out.print("Getting to setCurrent\n");
 
         int random = (int)(Math.random()*100);
 
@@ -125,6 +45,7 @@ public class Arena extends JPanel{
         {
             case 1:
             {
+                System.out.print("Red\n");
                 RedBlock block = new RedBlock();
                 block.setBlockType();
                 wallOfArena[currentX][currentY] = block.BlockColor;
@@ -132,6 +53,7 @@ public class Arena extends JPanel{
             }
             case 2:
             {
+                System.out.print("Green\n");
                 GreenBlock block = new GreenBlock();
                 block.setBlockType();
                 wallOfArena[currentX][currentY] = block.BlockColor;
@@ -139,6 +61,7 @@ public class Arena extends JPanel{
             }
             case 3:
             {
+                System.out.print("Blue\n");
                 BlueBlock block = new BlueBlock();
                 block.setBlockType();
                 wallOfArena[currentX][currentY] = block.BlockColor;
@@ -146,10 +69,12 @@ public class Arena extends JPanel{
             }
             default:
             {
-                wallOfArena[4][0] = Color.GRAY;
+                System.out.print("Error\n");
+                wallOfArena[currentX][currentY] = Color.GRAY;
             }
         }//End of switch
-    }//End of Wall Method
+    }//End of setCurrent
+
 
     @Override
     public void paintComponent(Graphics g)
@@ -164,37 +89,29 @@ public class Arena extends JPanel{
                 g.fillRect(55*i, 55*j, 54, 54);
             }
         }
+    }//End of paintComponent method
+
+    //Accessor methods
+
+    public int getCurrentX() {
+        return currentX;
     }
 
-    public void Update()
-    {
-        Timer gameTime = new Timer(1500, null);
-
-        gameArena.addKeyListener(new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                if(e.getKeyCode() == KeyEvent.VK_E)
-                {
-                    gameTime.start();
-                    System.out.print("Works");
-                }
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-
-            }
-        });
-
-        while(gameTime.isRunning())
-        {
-            System.out.print(gameTime.toString());
-        }
+    public int getCurrentY() {
+        return currentY;
     }
 
+    public Color[][] getWallOfArena() {
+        return wallOfArena;
+    }
+
+    //Mutator methods
+
+    public void setCurrentX(int currentX) {
+        this.currentX = currentX;
+    }
+
+    public void setCurrentY(int currentY) {
+        this.currentY = currentY;
+    }
 }//End of Arena Class
