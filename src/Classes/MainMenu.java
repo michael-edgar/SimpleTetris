@@ -14,6 +14,7 @@ public class MainMenu extends JFrame{
         FlowLayout menuLayout = new FlowLayout();
         menu.setLayout(menuLayout);
         JButton eTetris = new JButton("Example Tetris");
+        //menu.setIconImage();
         /*Border emptyBorder = BorderFactory.createEmptyBorder();
         eTetris.setBorder(emptyBorder);*/
         eTetris.addActionListener(new ActionListener() {

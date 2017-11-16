@@ -15,4 +15,9 @@ public class BlueBlock extends CurrentBlock{
     }//End of setBlockType
 
     public void setScore() { scoreValue = 50; }
+
+
+    public int getBlockScore() {
+        return scoreValue;
+    }
 }//End of BlueBlock Class

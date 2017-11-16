@@ -14,6 +14,8 @@ public abstract class CurrentBlock {
 
     public abstract void setScore();
 
+    public abstract int getBlockScore();
+
     //Mutator methods
     public void setSize(float[] size) { this.size = size; }
 

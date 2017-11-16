@@ -105,13 +105,20 @@ public class Movement{
         }
     }//End of dropTheBlock method
 
-    public static void lastBlock(Arena game, Color[][] arenaWall, int currentX, int currentY)
+    public static void lastBlock(Arena game, Color[][] arenaWall, int currentX, int currentY, Score gameScore)
     {
         if(arenaWall[currentX][currentY] == Color.BLUE)
         {
             if(currentX == 3 && currentY == 9)
             {
                 arenaWall[currentX][currentY] = Color.BLACK;
+
+                game.setCurrent(4,0);
+
+                BlueBlock block = new BlueBlock();
+                block.setScore();
+                gameScore.setCurrentScore(block.getBlockScore());
+                //System.out.print(block.getBlockScore());
             }
             else
             {
@@ -124,6 +131,13 @@ public class Movement{
             if(currentX == 4 && currentY == 9)
             {
                 arenaWall[currentX][currentY] = Color.BLACK;
+
+                game.setCurrent(4,0);
+
+                RedBlock block = new RedBlock();
+                block.setScore();
+                gameScore.setCurrentScore(block.getBlockScore());
+                //System.out.print(block.getBlockScore());
             }
             else
             {
@@ -136,11 +150,19 @@ public class Movement{
             if(currentX == 5 && currentY == 9)
             {
                 arenaWall[currentX][currentY] = Color.BLACK;
+
+                game.setCurrent(4,0);
+
+                GreenBlock block = new GreenBlock();
+                block.setScore();
+                gameScore.setCurrentScore(block.getBlockScore());
+                //System.out.print(block.getBlockScore());
             }
             else
             {
                 arenaWall[currentX][currentY] = Color.GRAY;
             }
         }
+        //System.out.print(gameScore.getCurrentScore());
     }//End of lastBlock
 }//End of Movement Class

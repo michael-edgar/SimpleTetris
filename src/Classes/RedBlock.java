@@ -15,4 +15,8 @@ public class RedBlock extends CurrentBlock {
     }//End of setBlockType
 
     public void setScore() { scoreValue = 20; }
+
+    public int getBlockScore() {
+        return scoreValue;
+    }
 }//End of RedBlock Class

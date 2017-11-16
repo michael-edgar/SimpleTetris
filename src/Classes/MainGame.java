@@ -3,15 +3,15 @@ package Classes;
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.*;
 
 public class MainGame{
     //JFrame gameArena = new JFrame("Simple Tetris");
 
     public static void main(String[] args)
     {
-        long gameStart = System.currentTimeMillis();
+        //long gameStart = System.currentTimeMillis();
         JFrame gameArena = new JFrame("Simple Tetris");
-        //gameArena.setLayout(new FlowLayout());
         gameArena.setSize(510,698);
         gameArena.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -27,6 +27,8 @@ public class MainGame{
         gameArena.pack();*/
 
         Arena game = new Arena();
+        Score gameScore  = new Score();
+        //game.add(gameScore);
         game.setCurrentX(4);
         game.setCurrentY(0);
         game.Wall();
@@ -55,9 +57,9 @@ public class MainGame{
                     }
                     else if(game.getCurrentY() == 9)
                     {
-                        Movement.lastBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY());
+                        Movement.lastBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), gameScore);
                     }
-                    System.out.print(game.getCurrentY());
+                    //System.out.print(game.getCurrentY());
                     game.repaint();
                 }
 
@@ -68,7 +70,7 @@ public class MainGame{
                     {
                         game.setCurrentX(game.getCurrentX()-1);
                     }
-                    System.out.print(game.getCurrentX());
+                    //System.out.print(game.getCurrentX());
                     game.repaint();
                 }
                 else if (e.getKeyCode() == KeyEvent.VK_R)
@@ -79,7 +81,7 @@ public class MainGame{
                     {
                         game.setCurrentX(game.getCurrentX()+1);
                     }
-                    System.out.print(game.getCurrentX());
+                    //System.out.print(game.getCurrentX());
                     game.repaint();
                 }
             }
@@ -90,13 +92,34 @@ public class MainGame{
             }
         });
 
-        if(System.currentTimeMillis() - gameStart == 1000)
+        new Thread() {
+            @Override public void run() {
+                while (true) {
+                    try {
+                        Thread.sleep(1000);
+                        Movement.dropTheBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY());
+                        if(game.getCurrentY() < 9)
+                        {
+                            game.setCurrentY(game.getCurrentY()+1);
+                        }
+                        else if(game.getCurrentY() == 9)
+                        {
+                            Movement.lastBlock(game,game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), gameScore);
+                        }
+                        game.repaint();
+
+                    } catch ( InterruptedException e ) {}
+                }
+            }
+        }.start();
+
+        /*if(System.currentTimeMillis() - gameStart == 1000)
         {
             Update(game);
-        }
+        }*/
     }//End of main method
 
-    public static void Update(Arena game)
+    /*public static void Update(Arena game)
     {
         System.out.print("Works \n");
         Movement.dropTheBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY());
@@ -110,5 +133,5 @@ public class MainGame{
         }
         System.out.print(game.getCurrentY());
         game.repaint();
-    }
+    }*/
 }//End of MainGame Class

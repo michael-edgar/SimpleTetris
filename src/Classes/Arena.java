@@ -7,6 +7,8 @@ public class Arena extends JPanel{
 
     private Color[][] wallOfArena = new Color[9][12];
     private int currentX, currentY;
+    String currentScore;
+    //currentScore = MainGame.gameScore.toString();
 
     public void Wall()
     {
@@ -35,6 +37,9 @@ public class Arena extends JPanel{
     {
         System.out.print("Getting to setCurrent\n");
 
+        setCurrentX(currentX);
+        setCurrentY(currentY);
+
         int random = (int)(Math.random()*100);
 
         while(random <= 0 || random > 3) {
@@ -48,6 +53,7 @@ public class Arena extends JPanel{
                 System.out.print("Red\n");
                 RedBlock block = new RedBlock();
                 block.setBlockType();
+                block.setScore();
                 wallOfArena[currentX][currentY] = block.BlockColor;
                 break;
             }
@@ -56,6 +62,7 @@ public class Arena extends JPanel{
                 System.out.print("Green\n");
                 GreenBlock block = new GreenBlock();
                 block.setBlockType();
+                block.setScore();
                 wallOfArena[currentX][currentY] = block.BlockColor;
                 break;
             }
@@ -64,6 +71,7 @@ public class Arena extends JPanel{
                 System.out.print("Blue\n");
                 BlueBlock block = new BlueBlock();
                 block.setBlockType();
+                block.setScore();
                 wallOfArena[currentX][currentY] = block.BlockColor;
                 break;
             }
@@ -86,6 +94,7 @@ public class Arena extends JPanel{
             for(int i = 0; i < 9; i++)
             {
                 g.setColor(wallOfArena[i][j]);
+                g.drawString("" + currentScore, 19, 19);
                 g.fillRect(55*i, 55*j, 54, 54);
             }
         }

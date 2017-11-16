@@ -15,4 +15,8 @@ public class GreenBlock extends CurrentBlock{
     }//End of setBlockType
 
     public void setScore() { scoreValue = 30; }
+
+    public int getBlockScore() {
+        return scoreValue;
+    }
 }//End of GreenBlock Class
