@@ -5,6 +5,8 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
 
 public class MainMenu extends JFrame{
     public static void main(String[] args) {
@@ -14,7 +16,7 @@ public class MainMenu extends JFrame{
         FlowLayout menuLayout = new FlowLayout();
         menu.setLayout(menuLayout);
         JButton eTetris = new JButton("Example Tetris");
-        //menu.setIconImage();
+        menu.setIconImage(new ImageIcon("Tetris-Logo.jpg").getImage());
         /*Border emptyBorder = BorderFactory.createEmptyBorder();
         eTetris.setBorder(emptyBorder);*/
         eTetris.addActionListener(new ActionListener() {
@@ -33,8 +35,8 @@ public class MainMenu extends JFrame{
             }
         });//End of myGame Listener
 
-        menu.add(eTetris);
         menu.add(myGame);
+        menu.add(eTetris);
         menu.setVisible(true);
 
 

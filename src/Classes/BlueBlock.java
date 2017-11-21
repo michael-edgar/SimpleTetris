@@ -5,7 +5,7 @@ import java.awt.*;
 public class BlueBlock extends CurrentBlock{
 
     //Attributes
-    Color BlockColor = new Color(0);
+    Color BlockColor = new Color(0, 0, 255);
 
     public void setBlockType()
     {
