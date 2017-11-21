@@ -2,33 +2,54 @@ package Classes;
 
 import java.awt.*;
 
-public abstract class CurrentBlock {
+public class CurrentBlock {
 
     //Attributes
-    private float [] size = new float[2];
-    private boolean match;
-    protected int scoreValue;
+    private Block thisBlock;
 
-    //Abstract Methods
-    public abstract void setBlockType();
+    public Color getColour() {return thisBlock.getColour();}
 
-    public abstract void setScore();
+    public Block getThisBlock() { return thisBlock;}
 
-    public abstract int getBlockScore();
-
-    //Mutator methods
-    public void setSize(float[] size) { this.size = size; }
-
-    //Accessor methods
-    public float[] getSize() { return size; }
-
-    //No argument constructor
-    public CurrentBlock() { this(null); }
-
-    //1 argument constructor
-    public CurrentBlock(float[] size)
+    public CurrentBlock ()
     {
-        setSize(size);
-        setBlockType();
-    }//End of 1 argument constructor
+        int random = (int)(Math.random()*100);
+
+        while(random <= 0 || random > 3) {
+            random = (int)(Math.random()*100);
+        }
+
+        switch (random) {
+            case 1: {
+                System.out.print("Red\n");
+                RedBlock block = new RedBlock();
+                block.setBlockType();
+                block.setBlockScore();
+                block.setColour();
+                thisBlock = block;
+                break;
+            }
+            case 2: {
+                System.out.print("Green\n");
+                GreenBlock block = new GreenBlock();
+                block.setBlockType();
+                block.setBlockScore();
+                block.setColour();
+                thisBlock = block;
+                break;
+            }
+            case 3: {
+                System.out.print("Blue\n");
+                BlueBlock block = new BlueBlock();
+                block.setBlockType();
+                block.setBlockScore();
+                block.setColour();
+                thisBlock = block;
+                break;
+            }
+            default: {
+                System.out.print("Error\n");
+            }
+        }
+    }
 }//End of Blocks class

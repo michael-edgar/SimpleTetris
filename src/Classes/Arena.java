@@ -8,6 +8,7 @@ public class Arena extends JPanel{
     private Color[][] wallOfArena = new Color[9][12];
     private int currentX, currentY;
     String currentScore;
+    static CurrentBlock thisBlock;
     //currentScore = MainGame.gameScore.toString();
 
     public void Wall()
@@ -40,47 +41,8 @@ public class Arena extends JPanel{
         setCurrentX(currentX);
         setCurrentY(currentY);
 
-        int random = (int)(Math.random()*100);
-
-        while(random <= 0 || random > 3) {
-            random = (int)(Math.random()*100);
-        }
-
-        switch (random)
-        {
-            case 1:
-            {
-                System.out.print("Red\n");
-                RedBlock block = new RedBlock();
-                block.setBlockType();
-                block.setScore();
-                wallOfArena[currentX][currentY] = block.BlockColor;
-                break;
-            }
-            case 2:
-            {
-                System.out.print("Green\n");
-                GreenBlock block = new GreenBlock();
-                block.setBlockType();
-                block.setScore();
-                wallOfArena[currentX][currentY] = block.BlockColor;
-                break;
-            }
-            case 3:
-            {
-                System.out.print("Blue\n");
-                BlueBlock block = new BlueBlock();
-                block.setBlockType();
-                block.setScore();
-                wallOfArena[currentX][currentY] = block.BlockColor;
-                break;
-            }
-            default:
-            {
-                System.out.print("Error\n");
-                wallOfArena[currentX][currentY] = Color.GRAY;
-            }
-        }//End of switch
+        thisBlock = new CurrentBlock();
+        wallOfArena[currentX][currentY] = thisBlock.getColour();
     }//End of setCurrent
 
 

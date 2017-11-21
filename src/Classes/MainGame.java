@@ -4,9 +4,12 @@ import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.*;
+import java.sql.Time;
+import java.time.Instant;
 
 public class MainGame{
-    //JFrame gameArena = new JFrame("Simple Tetris");
+    private static long gameSpeed = 1000;
+    private static long gameStart;
 
     public static void main(String[] args)
     {
@@ -21,6 +24,7 @@ public class MainGame{
         game.setCurrent(game.getCurrentX(), game.getCurrentY());
         gameArena.add(game);
         gameArena.setVisible(true);
+        gameStart = System.nanoTime();
         gameArena.setIconImage(new ImageIcon("Tetris-Logo.jpg").getImage());
         gameArena.addKeyListener(new KeyListener() {
             @Override
@@ -34,14 +38,14 @@ public class MainGame{
                 {
                     //gameTime.start();
                     //System.out.print("Works \n");
-                    Movement.dropTheBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY());
+                    Movement.dropTheBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), Arena.thisBlock.getThisBlock());
                     if(game.getCurrentY() < 9)
                     {
                         game.setCurrentY(game.getCurrentY()+1);
                     }
                     else if(game.getCurrentY() == 9)
                     {
-                        Movement.lastBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), gameScore);
+                        Movement.lastBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), gameScore, Arena.thisBlock.getThisBlock());
                     }
                     //System.out.print(game.getCurrentY());
                     game.repaint();
@@ -49,7 +53,7 @@ public class MainGame{
 
                 else if(e.getKeyCode() == KeyEvent.VK_W)
                 {
-                    Movement.moveLeft(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY());
+                    Movement.moveLeft(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), Arena.thisBlock.getThisBlock());
                     if(game.getCurrentX() > 1)
                     {
                         game.setCurrentX(game.getCurrentX()-1);
@@ -59,7 +63,7 @@ public class MainGame{
                 }
                 else if (e.getKeyCode() == KeyEvent.VK_R)
                 {
-                    Movement.moveRight(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY());
+                    Movement.moveRight(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), Arena.thisBlock.getThisBlock());
 
                     if(game.getCurrentX() < 7)
                     {
@@ -80,15 +84,15 @@ public class MainGame{
             @Override public void run() {
                 while (true) {
                     try {
-                        Thread.sleep(1000);
-                        Movement.dropTheBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY());
+                        Thread.sleep(gameSpeed);
+                        Movement.dropTheBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), Arena.thisBlock.getThisBlock());
                         if(game.getCurrentY() < 9)
                         {
                             game.setCurrentY(game.getCurrentY()+1);
                         }
                         else if(game.getCurrentY() == 9)
                         {
-                            Movement.lastBlock(game,game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), gameScore);
+                            Movement.lastBlock(game,game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), gameScore, Arena.thisBlock.getThisBlock());
                         }
                         game.repaint();
 
@@ -97,4 +101,13 @@ public class MainGame{
             }
         }.start();
     }//End of main method
+
+    public void setGameSpeed()
+    {
+        if ((System.nanoTime()- gameStart)%10000 == 0)
+        {
+            gameSpeed -= 10;
+        }
+
+    }
 }//End of MainGame Class

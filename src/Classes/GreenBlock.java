@@ -2,21 +2,31 @@ package Classes;
 
 import java.awt.*;
 
-public class GreenBlock extends CurrentBlock{
+public class GreenBlock extends Block{
 
-    //Attributes
-    Color BlockColor = new Color(0, 255, 0);
+    //Mutator Methods
 
-    public void setBlockType()
-    {
+    public void setBlockType() { thisBlock = new GreenBlock(); }
 
-        BlockColor = Color.GREEN;
+    public void setBlockScore() { scoreValue = 30; }
 
-    }//End of setBlockType
+    public void setColour() { blockColour = Color.GREEN; }
 
-    public void setScore() { scoreValue = 30; }
+    //Accessor Methods
+
+    public Color getColour() { return blockColour;}
+
+    public Block getBlockType() {return thisBlock;}
 
     public int getBlockScore() {
         return scoreValue;
+    }
+
+    //Constructor Method
+
+    public GreenBlock()
+    {
+        setColour();
+        setBlockScore();
     }
 }//End of GreenBlock Class
