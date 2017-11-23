@@ -8,7 +8,7 @@ public class BlueBlock extends Block{
 
     public void setBlockType() { thisBlock = new BlueBlock();}
 
-    public void setBlockScore() { scoreValue = 20; }
+    public void setBlockScore() { scoreValue = 50; }
 
     public void setColour() { blockColour = Color.BLUE; }
 

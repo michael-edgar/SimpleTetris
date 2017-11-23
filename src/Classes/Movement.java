@@ -5,42 +5,36 @@ import java.awt.*;
 public class Movement{
 
     public static void moveLeft(Arena game, Color [][] arenaWall, int currentX, int currentY, Block thisBlock){
-        Color setColour;
 
         if(arenaWall[currentX-1][currentY] == Color.BLACK)
         {
-            setColour = thisBlock.getColour();
             arenaWall[currentX][currentY] = Color.BLACK;
             game.setCurrentX(currentX--);
-            arenaWall[currentX][currentY] = setColour;
+            arenaWall[currentX][currentY] = thisBlock.getColour();
             //System.out.print("Is working\n");
         }
     }//End of moveLeft method
 
 
     public static void moveRight(Arena game, Color [][] arenaWall, int currentX, int currentY, Block thisBlock){
-        Color setColour;
 
         if(arenaWall[currentX+1][currentY] == Color.BLACK)
         {
-            setColour = thisBlock.getColour();
             arenaWall[currentX][currentY] = Color.BLACK;
             game.setCurrentX(currentX++);
-            arenaWall[currentX][currentY] = setColour;
+            arenaWall[currentX][currentY] = thisBlock.getColour();
             //System.out.print("Is working\n");
         }
     }//End of moveRight method
 
 
     public static void dropTheBlock(Arena game, Color [][] arenaWall, int currentX, int currentY, Block thisBlock){
-        Color setColour;
 
         if(arenaWall[currentX][currentY+1] == Color.BLACK)
         {
-            setColour = thisBlock.getColour();
             arenaWall[currentX][currentY] = Color.BLACK;
-            game.setCurrentX(currentX++);
-            arenaWall[currentX][currentY] = setColour;
+            game.setCurrentY(currentY++);
+            arenaWall[currentX][currentY] = thisBlock.getColour();
             //System.out.print("Is working\n");
         }
     }//End of dropTheBlock method
@@ -52,13 +46,9 @@ public class Movement{
             if(currentX == 3 && currentY == 9)
             {
                 arenaWall[currentX][currentY] = Color.BLACK;
-
                 game.setCurrent(4,0);
-
-                BlueBlock block = new BlueBlock();
-                block.setBlockScore();
-                gameScore.setCurrentScore(block.getBlockScore());
-                //System.out.print(block.getBlockScore());
+                gameScore.setCurrentScore(thisBlock.getBlockScore());
+                //System.out.print(thisBlock.getBlockScore());
             }
             else
             {
@@ -71,13 +61,9 @@ public class Movement{
             if(currentX == 4 && currentY == 9)
             {
                 arenaWall[currentX][currentY] = Color.BLACK;
-
                 game.setCurrent(4,0);
-
-                RedBlock block = new RedBlock();
-                block.setBlockScore();
-                gameScore.setCurrentScore(block.getBlockScore());
-                //System.out.print(block.getBlockScore());
+                gameScore.setCurrentScore(thisBlock.getBlockScore());
+                //System.out.print(thisBlock.getBlockScore());
             }
             else
             {
@@ -90,19 +76,15 @@ public class Movement{
             if(currentX == 5 && currentY == 9)
             {
                 arenaWall[currentX][currentY] = Color.BLACK;
-
                 game.setCurrent(4,0);
-
-                GreenBlock block = new GreenBlock();
-                block.setBlockScore();
-                gameScore.setCurrentScore(block.getBlockScore());
-                //System.out.print(block.getBlockScore());
+                gameScore.setCurrentScore(thisBlock.getBlockScore());
+                //System.out.print(thisBlock.getBlockScore());
             }
             else
             {
                 arenaWall[currentX][currentY] = Color.GRAY;
             }
         }
-        //System.out.print(gameScore.getCurrentScore());
+        //System.out.print(gameScore.getCurrentScore()+"\n");
     }//End of lastBlock
 }//End of Movement Class

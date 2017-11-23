@@ -10,6 +10,9 @@ import java.time.Instant;
 public class MainGame{
     private static long gameSpeed = 1000;
     private static long gameStart;
+    private static long currentTime;
+    private static long timeDifference;
+    private static double elapsedSeconds;
 
     public static void main(String[] args)
     {
@@ -17,7 +20,9 @@ public class MainGame{
         gameArena.setSize(510,698);
         gameArena.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Arena game = new Arena();
+        EndGame losing = new EndGame();
         Score gameScore  = new Score();
+        game.setScores(gameScore);
         game.setCurrentX(4);
         game.setCurrentY(0);
         game.Wall();
@@ -34,24 +39,30 @@ public class MainGame{
 
             @Override
             public void keyPressed(KeyEvent e) {
-                if(e.getKeyCode() == KeyEvent.VK_E)
+                if(e.getKeyCode() == KeyEvent.VK_SPACE)
                 {
                     //gameTime.start();
                     //System.out.print("Works \n");
                     Movement.dropTheBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), Arena.thisBlock.getThisBlock());
-                    if(game.getCurrentY() < 9)
-                    {
-                        game.setCurrentY(game.getCurrentY()+1);
-                    }
-                    else if(game.getCurrentY() == 9)
+                    if(game.getCurrentY() == 9)
                     {
                         Movement.lastBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), gameScore, Arena.thisBlock.getThisBlock());
+                        if(game.getWallOfArena()[game.getCurrentX()][game.getCurrentY()] == Color.GRAY)
+                        {
+                                losing.youLose(gameScore.getCurrentScore(), gameArena);
+                        }
+                        game.setScores(gameScore);
+                    }
+
+                    else if(game.getCurrentY() < 9)
+                    {
+                        game.setCurrentY(game.getCurrentY()+1);
                     }
                     //System.out.print(game.getCurrentY());
                     game.repaint();
                 }
 
-                else if(e.getKeyCode() == KeyEvent.VK_W)
+                else if(e.getKeyCode() == KeyEvent.VK_A)
                 {
                     Movement.moveLeft(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), Arena.thisBlock.getThisBlock());
                     if(game.getCurrentX() > 1)
@@ -61,7 +72,7 @@ public class MainGame{
                     //System.out.print(game.getCurrentX());
                     game.repaint();
                 }
-                else if (e.getKeyCode() == KeyEvent.VK_R)
+                else if (e.getKeyCode() == KeyEvent.VK_D)
                 {
                     Movement.moveRight(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), Arena.thisBlock.getThisBlock());
 
@@ -85,6 +96,10 @@ public class MainGame{
                 while (true) {
                     try {
                         Thread.sleep(gameSpeed);
+                        currentTime = System.nanoTime();
+                        timeDifference = currentTime - gameStart;
+                        elapsedSeconds = timeDifference/1000.0f;
+                        setGameSpeed();
                         Movement.dropTheBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), Arena.thisBlock.getThisBlock());
                         if(game.getCurrentY() < 9)
                         {
@@ -93,6 +108,19 @@ public class MainGame{
                         else if(game.getCurrentY() == 9)
                         {
                             Movement.lastBlock(game,game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), gameScore, Arena.thisBlock.getThisBlock());
+
+                            if(game.getWallOfArena()[game.getCurrentX()][game.getCurrentY()] == Color.GRAY)
+                            {
+                                    losing.youLose(gameScore.getCurrentScore(), gameArena);
+                                    break;
+                            }
+                            game.setScores(gameScore);
+                        }
+
+                        if(gameScore.getCurrentScore() > gameScore.getHighScore())
+                        {
+                            gameScore.setHighScore(gameScore.getCurrentScore());
+                            game.setScores(gameScore);
                         }
                         game.repaint();
 
@@ -102,12 +130,15 @@ public class MainGame{
         }.start();
     }//End of main method
 
-    public void setGameSpeed()
+    public static void setGameSpeed()
     {
-        if ((System.nanoTime()- gameStart)%10000 == 0)
+        if (elapsedSeconds%10 == 0)
         {
-            gameSpeed -= 10;
+            if(gameSpeed > 0)
+            {
+                gameSpeed -= 10;
+                System.out.print("gameSpeed: " +gameSpeed+ "\n");
+            }
         }
-
-    }
+    }//End of setGameSpeed
 }//End of MainGame Class

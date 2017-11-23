@@ -6,7 +6,7 @@ public class Score {
 
     //Accessor methods
     public int getCurrentScore() {
-        System.out.print("getScore\n");
+        //System.out.print("getScore\n");
         return currentScore;
     }
 
@@ -17,8 +17,7 @@ public class Score {
     //Mutator methods
     public void setCurrentScore(int currentScore) {
         this.currentScore += currentScore;
-
-        System.out.print("setScore\n");
+        //System.out.print("setScore\n");
     }
 
     public void setHighScore(int highScore) {
@@ -28,5 +27,15 @@ public class Score {
     public String toString()
     {
         return String.format("Current Score: %6d \nHigh Score: %6d", getCurrentScore(), getHighScore());
+    }
+
+    public String currentString()
+    {
+        return String.format("%d", currentScore);
+    }
+
+    public String highString()
+    {
+        return String.format("%d", highScore);
     }
 }//End of Score Class

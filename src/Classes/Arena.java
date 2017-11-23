@@ -7,7 +7,7 @@ public class Arena extends JPanel{
 
     private Color[][] wallOfArena = new Color[9][12];
     private int currentX, currentY;
-    String currentScore;
+    String currentScore, highScore;
     static CurrentBlock thisBlock;
     //currentScore = MainGame.gameScore.toString();
 
@@ -34,6 +34,12 @@ public class Arena extends JPanel{
         }
     }//End of Wall Method
 
+    public void setScores(Score gameScore)
+    {
+        this.currentScore = gameScore.currentString();
+        this.highScore = gameScore.highString();
+    }
+
     public void setCurrent(int currentX, int currentY)
     {
         System.out.print("Getting to setCurrent\n");
@@ -56,7 +62,8 @@ public class Arena extends JPanel{
             for(int i = 0; i < 9; i++)
             {
                 g.setColor(wallOfArena[i][j]);
-                g.drawString("" + currentScore, 19, 19);
+                g.drawString("Current Score: " + currentScore, 325, 100);
+                g.drawString("High Score: " + highScore, 325, 110);
                 g.fillRect(55*i, 55*j, 54, 54);
             }
         }
