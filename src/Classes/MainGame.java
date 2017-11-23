@@ -21,7 +21,7 @@ public class MainGame{
         gameArena.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Arena game = new Arena();
         EndGame losing = new EndGame();
-        Score gameScore  = new Score();
+        Score gameScore = losing.startScore();
         game.setScores(gameScore);
         game.setCurrentX(4);
         game.setCurrentY(0);
@@ -49,7 +49,7 @@ public class MainGame{
                         Movement.lastBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), gameScore, Arena.thisBlock.getThisBlock());
                         if(game.getWallOfArena()[game.getCurrentX()][game.getCurrentY()] == Color.GRAY)
                         {
-                                losing.youLose(gameScore.getCurrentScore(), gameArena);
+                                losing.youLose(gameScore, gameArena);
                         }
                         game.setScores(gameScore);
                     }
@@ -111,15 +111,9 @@ public class MainGame{
 
                             if(game.getWallOfArena()[game.getCurrentX()][game.getCurrentY()] == Color.GRAY)
                             {
-                                    losing.youLose(gameScore.getCurrentScore(), gameArena);
+                                    losing.youLose(gameScore, gameArena);
                                     break;
                             }
-                            game.setScores(gameScore);
-                        }
-
-                        if(gameScore.getCurrentScore() > gameScore.getHighScore())
-                        {
-                            gameScore.setHighScore(gameScore.getCurrentScore());
                             game.setScores(gameScore);
                         }
                         game.repaint();

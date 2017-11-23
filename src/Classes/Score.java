@@ -3,6 +3,7 @@ package Classes;
 public class Score {
     private int currentScore = 0;
     private int highScore = 0;
+    private String name;
 
     //Accessor methods
     public int getCurrentScore() {
@@ -20,8 +21,9 @@ public class Score {
         //System.out.print("setScore\n");
     }
 
-    public void setHighScore(int highScore) {
+    public void setHighScore(int highScore, String name) {
         this.highScore = highScore;
+        this.name = name;
     }
 
     public String toString()
@@ -36,6 +38,6 @@ public class Score {
 
     public String highString()
     {
-        return String.format("%d", highScore);
+        return String.format("%d %s", highScore, name);
     }
 }//End of Score Class
