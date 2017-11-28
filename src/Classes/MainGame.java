@@ -30,6 +30,7 @@ public class MainGame{
         gameArena.add(game);
         gameArena.setVisible(true);
         gameStart = System.nanoTime();
+        //Conor
         gameArena.setIconImage(new ImageIcon("Tetris-Logo.jpg").getImage());
         gameArena.addKeyListener(new KeyListener() {
             @Override
@@ -41,8 +42,6 @@ public class MainGame{
             public void keyPressed(KeyEvent e) {
                 if(e.getKeyCode() == KeyEvent.VK_SPACE)
                 {
-                    //gameTime.start();
-                    //System.out.print("Works \n");
                     Movement.dropTheBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), Arena.thisBlock.getThisBlock());
                     if(game.getCurrentY() == 9)
                     {
@@ -58,7 +57,6 @@ public class MainGame{
                     {
                         game.setCurrentY(game.getCurrentY()+1);
                     }
-                    //System.out.print(game.getCurrentY());
                     game.repaint();
                 }
 
@@ -69,7 +67,6 @@ public class MainGame{
                     {
                         game.setCurrentX(game.getCurrentX()-1);
                     }
-                    //System.out.print(game.getCurrentX());
                     game.repaint();
                 }
                 else if (e.getKeyCode() == KeyEvent.VK_D)
@@ -80,7 +77,6 @@ public class MainGame{
                     {
                         game.setCurrentX(game.getCurrentX()+1);
                     }
-                    //System.out.print(game.getCurrentX());
                     game.repaint();
                 }
             }
@@ -98,7 +94,7 @@ public class MainGame{
                         Thread.sleep(gameSpeed);
                         currentTime = System.nanoTime();
                         timeDifference = currentTime - gameStart;
-                        elapsedSeconds = timeDifference/1000.0f;
+                        elapsedSeconds = timeDifference/1000000000;
                         setGameSpeed();
                         Movement.dropTheBlock(game, game.getWallOfArena(), game.getCurrentX(), game.getCurrentY(), Arena.thisBlock.getThisBlock());
                         if(game.getCurrentY() < 9)
@@ -126,12 +122,12 @@ public class MainGame{
 
     public static void setGameSpeed()
     {
-        if (elapsedSeconds%10 == 0)
+        if (elapsedSeconds%5 == 0)
         {
             if(gameSpeed > 0)
             {
                 gameSpeed -= 10;
-                System.out.print("gameSpeed: " +gameSpeed+ "\n");
+                System.out.print("gameSpeed: " +gameSpeed+ "\nElapsed Seconds: " +elapsedSeconds+ "\n");
             }
         }
     }//End of setGameSpeed

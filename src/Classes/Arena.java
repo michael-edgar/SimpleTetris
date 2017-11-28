@@ -9,7 +9,6 @@ public class Arena extends JPanel{
     private int currentX, currentY;
     String currentScore, highScore;
     static CurrentBlock thisBlock;
-    //currentScore = MainGame.gameScore.toString();
 
     public void Wall()
     {
@@ -42,8 +41,6 @@ public class Arena extends JPanel{
 
     public void setCurrent(int currentX, int currentY)
     {
-        System.out.print("Getting to setCurrent\n");
-
         setCurrentX(currentX);
         setCurrentY(currentY);
 

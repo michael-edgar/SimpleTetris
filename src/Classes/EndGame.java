@@ -5,8 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 
-public class EndGame implements Serializable{
-    public static String name;
+public class EndGame{
     public static ObjectOutputStream os;
     public static ObjectInputStream is;
 
@@ -18,11 +17,11 @@ public class EndGame implements Serializable{
 
         try {
             os = new ObjectOutputStream(new FileOutputStream("highScore.data"));
-            is = new ObjectInputStream(new FileInputStream("highScore.data"));
         }
         catch(IOException ioe)
         {
             System.out.print("Error! File Not Found");
+            ioe.printStackTrace();
         }
     }
 
@@ -31,7 +30,9 @@ public class EndGame implements Serializable{
         Score gameScore;
 
         try{
+            is = new ObjectInputStream(new FileInputStream("highScore.data"));
             gameScore = (Score)is.readObject();
+            gameScore.setCurrentScore(-gameScore.getCurrentScore());
             is.close();
         }
         catch (IOException ioe)
@@ -47,7 +48,6 @@ public class EndGame implements Serializable{
         catch (NullPointerException npe)
         {
             gameScore = new Score();
-            npe.printStackTrace();
             System.out.print("Null Pointer\n");
         }
 
@@ -68,18 +68,15 @@ public class EndGame implements Serializable{
 
         if(gameScore.getCurrentScore() > gameScore.getHighScore())
         {
-            loseArea.append("\n   Please enter your name: ");
-            JTextField nameField = new JTextField(30);
-            endScreen.add(nameField);
-            nameField.grabFocus();
-            JButton enterName = new JButton("Enter and Close");
-            enterName.addActionListener(new ActionListener() {
+            loseArea.append("\n   Congrats!! New High Score");
+            JButton highScore = new JButton("Close");
+            highScore.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    name = nameField.getText();
-                    gameScore.setHighScore(gameScore.getCurrentScore(), name);
+                    //name = nameField.getText();
+                    gameScore.setHighScore(gameScore.getCurrentScore());
                     try {
-                        os.writeObject(gameScore.highString());
+                        os.writeObject(gameScore);
                         System.out.print("Saved");
                         os.close();
                     }
@@ -90,10 +87,19 @@ public class EndGame implements Serializable{
                     System.exit(0);
                 }
             });
-            endScreen.add(enterName);
+            endScreen.add(highScore);
         }
         else
         {
+            try {
+                //os.writeObject(gameScore);
+                System.out.print("Don't do it");
+                os.close();
+            }
+            catch (IOException ioe)
+            {
+                System.out.print("Error! File Not Found");
+            }
             JButton closeGame = new JButton("Close");
             closeGame.addActionListener(new ActionListener() {
                 @Override

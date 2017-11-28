@@ -1,13 +1,13 @@
 package Classes;
 
-public class Score {
+import java.io.Serializable;
+
+public class Score implements Serializable{
     private int currentScore = 0;
     private int highScore = 0;
-    private String name;
 
     //Accessor methods
     public int getCurrentScore() {
-        //System.out.print("getScore\n");
         return currentScore;
     }
 
@@ -18,12 +18,10 @@ public class Score {
     //Mutator methods
     public void setCurrentScore(int currentScore) {
         this.currentScore += currentScore;
-        //System.out.print("setScore\n");
     }
 
-    public void setHighScore(int highScore, String name) {
+    public void setHighScore(int highScore) {
         this.highScore = highScore;
-        this.name = name;
     }
 
     public String toString()
@@ -37,9 +35,4 @@ public class Score {
     }
 
     public String getHighString() { return String.format("     %d", highScore);}
-
-    public String highString()
-    {
-        return String.format("%d %s", highScore, name);
-    }
 }//End of Score Class

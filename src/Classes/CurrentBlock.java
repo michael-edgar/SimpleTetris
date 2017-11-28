@@ -4,7 +4,6 @@ import java.awt.*;
 
 public class CurrentBlock {
 
-    //Attributes
     private Block thisBlock;
 
     public Color getColour() {return thisBlock.getColour();}
@@ -21,7 +20,6 @@ public class CurrentBlock {
 
         switch (random) {
             case 1: {
-                System.out.print("Red\n");
                 RedBlock block = new RedBlock();
                 block.setBlockType();
                 block.setBlockScore();
@@ -30,7 +28,6 @@ public class CurrentBlock {
                 break;
             }
             case 2: {
-                System.out.print("Green\n");
                 GreenBlock block = new GreenBlock();
                 block.setBlockType();
                 block.setBlockScore();
@@ -39,7 +36,6 @@ public class CurrentBlock {
                 break;
             }
             case 3: {
-                System.out.print("Blue\n");
                 BlueBlock block = new BlueBlock();
                 block.setBlockType();
                 block.setBlockScore();

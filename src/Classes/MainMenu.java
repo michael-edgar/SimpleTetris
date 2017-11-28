@@ -1,7 +1,8 @@
 package Classes;
 
+import javafx.scene.image.Image;
+
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,10 +16,8 @@ public class MainMenu extends JFrame{
         menu.setSize(500,200);
         FlowLayout menuLayout = new FlowLayout();
         menu.setLayout(menuLayout);
-        JButton eTetris = new JButton("Example Tetris");
         menu.setIconImage(new ImageIcon("Tetris-Logo.jpg").getImage());
-        /*Border emptyBorder = BorderFactory.createEmptyBorder();
-        eTetris.setBorder(emptyBorder);*/
+        JButton eTetris = new JButton("Example Tetris");
         eTetris.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -38,8 +37,5 @@ public class MainMenu extends JFrame{
         menu.add(myGame);
         menu.add(eTetris);
         menu.setVisible(true);
-
-
-
     }//End of main method
 }//End of MainMenu Class

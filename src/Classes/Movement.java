@@ -11,7 +11,6 @@ public class Movement{
             arenaWall[currentX][currentY] = Color.BLACK;
             game.setCurrentX(currentX--);
             arenaWall[currentX][currentY] = thisBlock.getColour();
-            //System.out.print("Is working\n");
         }
     }//End of moveLeft method
 
@@ -23,7 +22,6 @@ public class Movement{
             arenaWall[currentX][currentY] = Color.BLACK;
             game.setCurrentX(currentX++);
             arenaWall[currentX][currentY] = thisBlock.getColour();
-            //System.out.print("Is working\n");
         }
     }//End of moveRight method
 
@@ -35,7 +33,6 @@ public class Movement{
             arenaWall[currentX][currentY] = Color.BLACK;
             game.setCurrentY(currentY++);
             arenaWall[currentX][currentY] = thisBlock.getColour();
-            //System.out.print("Is working\n");
         }
     }//End of dropTheBlock method
 
@@ -48,7 +45,6 @@ public class Movement{
                 arenaWall[currentX][currentY] = Color.BLACK;
                 game.setCurrent(4,0);
                 gameScore.setCurrentScore(thisBlock.getBlockScore());
-                //System.out.print(thisBlock.getBlockScore());
             }
             else
             {
@@ -63,7 +59,6 @@ public class Movement{
                 arenaWall[currentX][currentY] = Color.BLACK;
                 game.setCurrent(4,0);
                 gameScore.setCurrentScore(thisBlock.getBlockScore());
-                //System.out.print(thisBlock.getBlockScore());
             }
             else
             {
@@ -78,13 +73,11 @@ public class Movement{
                 arenaWall[currentX][currentY] = Color.BLACK;
                 game.setCurrent(4,0);
                 gameScore.setCurrentScore(thisBlock.getBlockScore());
-                //System.out.print(thisBlock.getBlockScore());
             }
             else
             {
                 arenaWall[currentX][currentY] = Color.GRAY;
             }
         }
-        //System.out.print(gameScore.getCurrentScore()+"\n");
     }//End of lastBlock
 }//End of Movement Class
