@@ -34,7 +34,7 @@ public class EndGame implements Serializable{
 
     public Score startScore()
     {
-        Score gameScore = new Score();
+        Score gameScore;
 
         try{
             gameScore = (Score)inObjectStream.readObject();

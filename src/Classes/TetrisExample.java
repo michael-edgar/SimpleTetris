@@ -11,6 +11,10 @@ import java.util.Collections;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+/*Tetris.java by DataWraith on github.com November 13th 2017
+* I accesed the file on November 9th 2017
+* The only change I made was to the class name*/
+
 public class TetrisExample extends JPanel {
 
     private static final long serialVersionUID = -8715353373678321308L;
