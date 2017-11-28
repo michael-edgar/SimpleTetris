@@ -7,24 +7,18 @@ import java.io.*;
 
 public class EndGame implements Serializable{
     public static String name;
-    public static File outFile, inFile;
-    public static FileOutputStream outputStream;
-    public static FileInputStream inputStream;
-    public static ObjectOutputStream outObjectStream;
-    public static ObjectInputStream inObjectStream;
+    public static ObjectOutputStream os;
+    public static ObjectInputStream is;
 
 
     public void youLose(Score gameScore, JFrame gameArena)
     {
         gameArena.setVisible(false);
         loseFrame(gameScore);
-        outFile = new File("highScore.data");
-        inFile = new File("highScore.data");
+
         try {
-            outputStream = new FileOutputStream(outFile);
-            outObjectStream = new ObjectOutputStream(outputStream);
-            inputStream = new FileInputStream(inFile);
-            inObjectStream = new ObjectInputStream(inputStream);
+            os = new ObjectOutputStream(new FileOutputStream("highScore.data"));
+            is = new ObjectInputStream(new FileInputStream("highScore.data"));
         }
         catch(IOException ioe)
         {
@@ -37,17 +31,24 @@ public class EndGame implements Serializable{
         Score gameScore;
 
         try{
-            gameScore = (Score)inObjectStream.readObject();
+            gameScore = (Score)is.readObject();
+            is.close();
         }
         catch (IOException ioe)
         {
             gameScore = new Score();
-            System.out.print("Not reading Score");
+            System.out.print("Not reading Score\n");
         }
         catch (ClassNotFoundException cnfe)
         {
             gameScore = new Score();
-            System.out.print("Not reading Score");
+            System.out.print("No Class\n");
+        }
+        catch (NullPointerException npe)
+        {
+            gameScore = new Score();
+            npe.printStackTrace();
+            System.out.print("Null Pointer\n");
         }
 
         return  gameScore;
@@ -78,7 +79,9 @@ public class EndGame implements Serializable{
                     name = nameField.getText();
                     gameScore.setHighScore(gameScore.getCurrentScore(), name);
                     try {
-                        outObjectStream.writeObject(gameScore.highString());
+                        os.writeObject(gameScore.highString());
+                        System.out.print("Saved");
+                        os.close();
                     }
                     catch (IOException ioe)
                     {

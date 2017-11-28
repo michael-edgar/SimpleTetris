@@ -37,7 +37,7 @@ public class Arena extends JPanel{
     public void setScores(Score gameScore)
     {
         this.currentScore = gameScore.currentString();
-        this.highScore = gameScore.highString();
+        this.highScore = gameScore.getHighString();
     }
 
     public void setCurrent(int currentX, int currentY)

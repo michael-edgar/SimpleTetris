@@ -36,6 +36,8 @@ public class Score {
         return String.format("%d", currentScore);
     }
 
+    public String getHighString() { return String.format("     %d", highScore);}
+
     public String highString()
     {
         return String.format("%d %s", highScore, name);
