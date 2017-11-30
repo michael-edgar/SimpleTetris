@@ -10,7 +10,7 @@ public class MainMenu extends JFrame{
         JFrame menu = new JFrame("Menu");
         menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         menu.setSize(500,200);
-
+        //Stack Overflow
         menu.setIconImage(new ImageIcon("Tetris-Logo.jpg").getImage());
         JMenuBar menuBar = new JMenuBar();
         menu.setJMenuBar(menuBar);
@@ -33,10 +33,12 @@ public class MainMenu extends JFrame{
                 menu.setVisible(false);
                 if(itemText.equals("Simple Tetris"))
                 {
+                    //Stack Overflow
                     MainGame.main(args);
                 }
                 else
                 {
+                    //Stack Overflow
                     TetrisExample.main(args);
                 }
             }

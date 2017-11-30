@@ -8,6 +8,7 @@ import java.sql.Time;
 import java.time.Instant;
 
 public class MainGame{
+    //Stack Overflow
     private static long gameSpeed = 1000;
     private static long gameStart;
     private static long currentTime;
@@ -30,7 +31,7 @@ public class MainGame{
         gameArena.add(game);
         gameArena.setVisible(true);
         gameStart = System.nanoTime();
-        //Conor
+        //Stack Overflow
         gameArena.setIconImage(new ImageIcon("Tetris-Logo.jpg").getImage());
         gameArena.addKeyListener(new KeyListener() {
             @Override

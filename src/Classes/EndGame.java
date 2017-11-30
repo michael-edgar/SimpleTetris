@@ -87,6 +87,7 @@ public class EndGame{
     public static void loseFrame(Score gameScore)
     {
         JFrame endScreen = new JFrame("You lose!");
+        //Stack Overflow
         endScreen.setIconImage(new ImageIcon("Tetris-Logo.jpg").getImage());
         endScreen.setSize(500, 200);
         endScreen.setLayout(new FlowLayout());
