@@ -7,8 +7,8 @@ public class Arena extends JPanel{
 
     private Color[][] wallOfArena = new Color[9][12];
     private int currentX, currentY;
-    String currentScore, highScore;
-    static CurrentBlock thisBlock;
+    private String currentScore, highScore;
+    public static CurrentBlock thisBlock;
 
     public void Wall()
     {

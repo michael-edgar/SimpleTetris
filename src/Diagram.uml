@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="754.9005208333333" y="267.0">Classes.GreenBlock</node>
+    <node x="535.1643229166666" y="0.0">Classes.Block</node>
+    <node x="479.15052083333336" y="801.0">Classes.Arena</node>
+    <node x="356.90052083333336" y="267.0">Classes.BlueBlock</node>
+    <node x="10.5" y="900.0">Classes.EndGame</node>
+    <node x="372.65052083333336" y="1390.0">Classes.TetrisExample</node>
+    <node x="174.40052083333336" y="1212.0">Classes.Movement</node>
+    <node x="555.9005208333333" y="267.0">Classes.RedBlock</node>
+    <node x="87.22552083333335" y="500.0">Classes.Score</node>
+    <node x="204.40052083333336" y="1933.0">Classes.MainMenu</node>
+    <node x="157.65052083333336" y="1544.0">Classes.MainGame</node>
+    <node x="555.4005208333333" y="565.5">Classes.CurrentBlock</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Classes.MainMenu" target="Classes.TetrisExample">
+      <point x="85.0" y="-37.0" />
+      <point x="459.40052083333336" y="1908.0" />
+      <point x="493.65052083333336" y="1908.0" />
+      <point x="0.0" y="246.5" />
+    </edge>
+    <edge source="Classes.MainGame" target="Classes.Movement">
+      <point x="16.25" y="-92.5" />
+      <point x="271.40052083333336" y="1350.0" />
+      <point x="346.40052083333336" y="1350.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="Classes.Movement" target="Classes.Arena">
+      <point x="114.66666666666663" y="-59.0" />
+      <point x="461.0671875" y="1187.0" />
+      <point x="519.4838541666667" y="1187.0" />
+      <point x="-80.66666666666669" y="180.5" />
+    </edge>
+    <edge source="Classes.Arena" target="Classes.CurrentBlock">
+      <point x="0.0" y="-180.5" />
+      <point x="-44.75" y="60.0" />
+    </edge>
+    <edge source="Classes.CurrentBlock" target="Classes.Block">
+      <point x="-33.5625" y="-60.0" />
+      <point x="611.3380208333333" y="460.0" />
+      <point x="545.4005208333333" y="460.0" />
+      <point x="545.4005208333333" y="247.0" />
+      <point x="609.3309895833333" y="247.0" />
+      <point x="-14.833333333333314" y="103.5" />
+    </edge>
+    <edge source="Classes.Arena" target="Classes.Score">
+      <point x="-80.66666666666669" y="-180.5" />
+      <point x="519.4838541666667" y="781.0" />
+      <point x="290.6255208333333" y="781.0" />
+      <point x="90.39999999999998" y="125.5" />
+    </edge>
+    <edge source="Classes.MainGame" target="Classes.Score">
+      <point x="-81.25" y="-92.5" />
+      <point x="173.90052083333336" y="1370.0" />
+      <point x="0.0" y="1370.0" />
+      <point x="0.0" y="771.0" />
+      <point x="109.82552083333337" y="771.0" />
+      <point x="-90.39999999999998" y="125.5" />
+    </edge>
+    <edge source="Classes.GreenBlock" target="Classes.Block">
+      <point x="0.0" y="-81.5" />
+      <point x="843.9005208333333" y="237.0" />
+      <point x="698.3309895833333" y="237.0" />
+      <point x="74.16666666666669" y="103.5" />
+    </edge>
+    <edge source="Classes.CurrentBlock" target="Classes.BlueBlock">
+      <point x="-78.3125" y="-60.0" />
+      <point x="566.5880208333333" y="480.0" />
+      <point x="401.40052083333336" y="480.0" />
+      <point x="-44.5" y="81.5" />
+    </edge>
+    <edge source="Classes.RedBlock" target="Classes.Block">
+      <point x="0.0" y="-81.5" />
+      <point x="644.9005208333333" y="247.0" />
+      <point x="638.99765625" y="247.0" />
+      <point x="14.833333333333314" y="103.5" />
+    </edge>
+    <edge source="Classes.BlueBlock" target="Classes.Block">
+      <point x="0.0" y="-81.5" />
+      <point x="445.90052083333336" y="237.0" />
+      <point x="579.6643229166666" y="237.0" />
+      <point x="-44.5" y="103.5" />
+    </edge>
+    <edge source="Classes.Movement" target="Classes.Score">
+      <point x="-114.66666666666669" y="-59.0" />
+      <point x="231.73385416666667" y="1187.0" />
+      <point x="265.61223958333335" y="1187.0" />
+      <point x="265.61223958333335" y="781.0" />
+      <point x="245.4255208333334" y="781.0" />
+      <point x="45.200000000000045" y="125.5" />
+    </edge>
+    <edge source="Classes.EndGame" target="Classes.Score">
+      <point x="55.25" y="-81.5" />
+      <point x="176.25" y="781.0" />
+      <point x="200.22552083333335" y="781.0" />
+      <point x="0.0" y="125.5" />
+    </edge>
+    <edge source="Classes.Movement" target="Classes.Block">
+      <point x="0.0" y="-59.0" />
+      <point x="346.40052083333336" y="1187.0" />
+      <point x="329.25" y="1187.0" />
+      <point x="329.25" y="227.0" />
+      <point x="549.99765625" y="227.0" />
+      <point x="-74.16666666666669" y="103.5" />
+    </edge>
+    <edge source="Classes.MainGame" target="Classes.EndGame">
+      <point x="-16.25" y="-92.5" />
+      <point x="238.90052083333336" y="1350.0" />
+      <point x="126.5" y="1350.0" />
+      <point x="126.5" y="1187.0" />
+      <point x="176.25" y="1187.0" />
+      <point x="55.25" y="81.5" />
+    </edge>
+    <edge source="Classes.CurrentBlock" target="Classes.GreenBlock">
+      <point x="78.3125" y="-60.0" />
+      <point x="723.2130208333333" y="480.0" />
+      <point x="888.4005208333333" y="480.0" />
+      <point x="44.5" y="81.5" />
+    </edge>
+    <edge source="Classes.MainMenu" target="Classes.MainGame">
+      <point x="-85.0" y="-37.0" />
+      <point x="289.40052083333336" y="1908.0" />
+      <point x="255.15052083333336" y="1908.0" />
+      <point x="0.0" y="92.5" />
+    </edge>
+    <edge source="Classes.CurrentBlock" target="Classes.RedBlock">
+      <point x="11.1875" y="-60.0" />
+      <point x="656.0880208333333" y="450.0" />
+      <point x="689.4005208333333" y="450.0" />
+      <point x="44.5" y="81.5" />
+    </edge>
+    <edge source="Classes.MainGame" target="Classes.Arena">
+      <point x="48.75" y="-92.5" />
+      <point x="303.90052083333336" y="1360.0" />
+      <point x="634.9838541666667" y="1360.0" />
+      <point x="634.9838541666667" y="1187.0" />
+      <point x="600.1505208333333" y="1187.0" />
+      <point x="0.0" y="180.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.1" x="2459.8333333333353" y="2166.1666666666674" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

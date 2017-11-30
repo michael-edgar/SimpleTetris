@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="981212bc-c2ee-42ee-bd8e-23c7c54448fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/highScore.data" afterPath="$PROJECT_DIR$/highScore.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/UML Diagram.vsdx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/~$ed to Reference.docx" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Need to Reference.docx" afterPath="$PROJECT_DIR$/Need to Reference.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/Arena.class" afterPath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/Arena.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/EndGame$1.class" afterPath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/EndGame$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/EndGame$2.class" afterPath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/EndGame$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/EndGame.class" afterPath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/EndGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/MainMenu$1.class" afterPath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/MainMenu$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/MainMenu.class" afterPath="$PROJECT_DIR$/out/production/SimpleTetris/Classes/MainMenu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Arena.java" afterPath="$PROJECT_DIR$/src/Classes/Arena.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Block.java" afterPath="$PROJECT_DIR$/src/Classes/Block.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/BlueBlock.java" afterPath="$PROJECT_DIR$/src/Classes/BlueBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/EndGame.java" afterPath="$PROJECT_DIR$/src/Classes/EndGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/GreenBlock.java" afterPath="$PROJECT_DIR$/src/Classes/GreenBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/MainGame.java" afterPath="$PROJECT_DIR$/src/Classes/MainGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/MainMenu.java" afterPath="$PROJECT_DIR$/src/Classes/MainMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Movement.java" afterPath="$PROJECT_DIR$/src/Classes/Movement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/RedBlock.java" afterPath="$PROJECT_DIR$/src/Classes/RedBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classes/Score.java" afterPath="$PROJECT_DIR$/src/Classes/Score.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,9 +30,169 @@
       <file leaf-file-name="Arena.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Classes/Arena.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+            <state relative-caret-position="17">
+              <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Diagram.uml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Diagram.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="754.9005208333333" y="267.0">Classes.GreenBlock</node>
+                <node x="535.1643229166666" y="0.0">Classes.Block</node>
+                <node x="479.15052083333336" y="801.0">Classes.Arena</node>
+                <node x="356.90052083333336" y="267.0">Classes.BlueBlock</node>
+                <node x="10.5" y="900.0">Classes.EndGame</node>
+                <node x="372.65052083333336" y="1390.0">Classes.TetrisExample</node>
+                <node x="174.40052083333336" y="1212.0">Classes.Movement</node>
+                <node x="555.9005208333333" y="267.0">Classes.RedBlock</node>
+                <node x="87.22552083333335" y="500.0">Classes.Score</node>
+                <node x="204.40052083333336" y="1933.0">Classes.MainMenu</node>
+                <node x="157.65052083333336" y="1544.0">Classes.MainGame</node>
+                <node x="555.4005208333333" y="565.5">Classes.CurrentBlock</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="Classes.MainMenu" target="Classes.TetrisExample">
+                  <point x="85.0" y="-37.0" />
+                  <point x="459.40052083333336" y="1908.0" />
+                  <point x="493.65052083333336" y="1908.0" />
+                  <point x="0.0" y="246.5" />
+                </edge>
+                <edge source="Classes.MainGame" target="Classes.Movement">
+                  <point x="16.25" y="-92.5" />
+                  <point x="271.40052083333336" y="1350.0" />
+                  <point x="346.40052083333336" y="1350.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="Classes.Movement" target="Classes.Arena">
+                  <point x="114.66666666666663" y="-59.0" />
+                  <point x="461.0671875" y="1187.0" />
+                  <point x="519.4838541666667" y="1187.0" />
+                  <point x="-80.66666666666669" y="180.5" />
+                </edge>
+                <edge source="Classes.Arena" target="Classes.CurrentBlock">
+                  <point x="0.0" y="-180.5" />
+                  <point x="-44.75" y="60.0" />
+                </edge>
+                <edge source="Classes.CurrentBlock" target="Classes.Block">
+                  <point x="-33.5625" y="-60.0" />
+                  <point x="611.3380208333333" y="460.0" />
+                  <point x="545.4005208333333" y="460.0" />
+                  <point x="545.4005208333333" y="247.0" />
+                  <point x="609.3309895833333" y="247.0" />
+                  <point x="-14.833333333333314" y="103.5" />
+                </edge>
+                <edge source="Classes.Arena" target="Classes.Score">
+                  <point x="-80.66666666666669" y="-180.5" />
+                  <point x="519.4838541666667" y="781.0" />
+                  <point x="290.6255208333333" y="781.0" />
+                  <point x="90.39999999999998" y="125.5" />
+                </edge>
+                <edge source="Classes.MainGame" target="Classes.Score">
+                  <point x="-81.25" y="-92.5" />
+                  <point x="173.90052083333336" y="1370.0" />
+                  <point x="0.0" y="1370.0" />
+                  <point x="0.0" y="771.0" />
+                  <point x="109.82552083333337" y="771.0" />
+                  <point x="-90.39999999999998" y="125.5" />
+                </edge>
+                <edge source="Classes.GreenBlock" target="Classes.Block">
+                  <point x="0.0" y="-81.5" />
+                  <point x="843.9005208333333" y="237.0" />
+                  <point x="698.3309895833333" y="237.0" />
+                  <point x="74.16666666666669" y="103.5" />
+                </edge>
+                <edge source="Classes.CurrentBlock" target="Classes.BlueBlock">
+                  <point x="-78.3125" y="-60.0" />
+                  <point x="566.5880208333333" y="480.0" />
+                  <point x="401.40052083333336" y="480.0" />
+                  <point x="-44.5" y="81.5" />
+                </edge>
+                <edge source="Classes.RedBlock" target="Classes.Block">
+                  <point x="0.0" y="-81.5" />
+                  <point x="644.9005208333333" y="247.0" />
+                  <point x="638.99765625" y="247.0" />
+                  <point x="14.833333333333314" y="103.5" />
+                </edge>
+                <edge source="Classes.BlueBlock" target="Classes.Block">
+                  <point x="0.0" y="-81.5" />
+                  <point x="445.90052083333336" y="237.0" />
+                  <point x="579.6643229166666" y="237.0" />
+                  <point x="-44.5" y="103.5" />
+                </edge>
+                <edge source="Classes.Movement" target="Classes.Score">
+                  <point x="-114.66666666666669" y="-59.0" />
+                  <point x="231.73385416666667" y="1187.0" />
+                  <point x="265.61223958333335" y="1187.0" />
+                  <point x="265.61223958333335" y="781.0" />
+                  <point x="245.4255208333334" y="781.0" />
+                  <point x="45.200000000000045" y="125.5" />
+                </edge>
+                <edge source="Classes.EndGame" target="Classes.Score">
+                  <point x="55.25" y="-81.5" />
+                  <point x="176.25" y="781.0" />
+                  <point x="200.22552083333335" y="781.0" />
+                  <point x="0.0" y="125.5" />
+                </edge>
+                <edge source="Classes.Movement" target="Classes.Block">
+                  <point x="0.0" y="-59.0" />
+                  <point x="346.40052083333336" y="1187.0" />
+                  <point x="329.25" y="1187.0" />
+                  <point x="329.25" y="227.0" />
+                  <point x="549.99765625" y="227.0" />
+                  <point x="-74.16666666666669" y="103.5" />
+                </edge>
+                <edge source="Classes.MainGame" target="Classes.EndGame">
+                  <point x="-16.25" y="-92.5" />
+                  <point x="238.90052083333336" y="1350.0" />
+                  <point x="126.5" y="1350.0" />
+                  <point x="126.5" y="1187.0" />
+                  <point x="176.25" y="1187.0" />
+                  <point x="55.25" y="81.5" />
+                </edge>
+                <edge source="Classes.CurrentBlock" target="Classes.GreenBlock">
+                  <point x="78.3125" y="-60.0" />
+                  <point x="723.2130208333333" y="480.0" />
+                  <point x="888.4005208333333" y="480.0" />
+                  <point x="44.5" y="81.5" />
+                </edge>
+                <edge source="Classes.MainMenu" target="Classes.MainGame">
+                  <point x="-85.0" y="-37.0" />
+                  <point x="289.40052083333336" y="1908.0" />
+                  <point x="255.15052083333336" y="1908.0" />
+                  <point x="0.0" y="92.5" />
+                </edge>
+                <edge source="Classes.CurrentBlock" target="Classes.RedBlock">
+                  <point x="11.1875" y="-60.0" />
+                  <point x="656.0880208333333" y="450.0" />
+                  <point x="689.4005208333333" y="450.0" />
+                  <point x="44.5" y="81.5" />
+                </edge>
+                <edge source="Classes.MainGame" target="Classes.Arena">
+                  <point x="48.75" y="-92.5" />
+                  <point x="303.90052083333336" y="1360.0" />
+                  <point x="634.9838541666667" y="1360.0" />
+                  <point x="634.9838541666667" y="1187.0" />
+                  <point x="600.1505208333333" y="1187.0" />
+                  <point x="0.0" y="180.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.1" x="4397.333333333334" y="3561.1666666666665" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -61,18 +220,18 @@
       <file leaf-file-name="CurrentBlock.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Classes/CurrentBlock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
+            <state relative-caret-position="629">
               <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EndGame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EndGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Classes/EndGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="51" column="24" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+            <state relative-caret-position="221">
+              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,8 +242,8 @@
       <file leaf-file-name="MainGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Classes/MainGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="34" />
+            <state relative-caret-position="663">
+              <caret line="44" column="116" lean-forward="false" selection-start-line="44" selection-start-column="116" selection-end-line="44" selection-end-column="116" />
               <folding />
             </state>
           </provider>
@@ -93,7 +252,7 @@
       <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Classes/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="306">
               <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,7 +274,7 @@
       <file leaf-file-name="Score.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Classes/Score.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
+            <state relative-caret-position="493">
               <caret line="38" column="80" lean-forward="false" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
               <folding>
                 <element signature="e#307#308#0" expanded="true" />
@@ -158,7 +317,6 @@
         <option value="$PROJECT_DIR$/src/Classes/Blocks.java" />
         <option value="$PROJECT_DIR$/src/Classes/TetrisExample.java" />
         <option value="$PROJECT_DIR$/src/Classes/CurrentBlock.java" />
-        <option value="$PROJECT_DIR$/src/Classes/Arena.java" />
         <option value="$PROJECT_DIR$/src/Classes/Movement.java" />
         <option value="$PROJECT_DIR$/src/Classes/MainGame.java" />
         <option value="$PROJECT_DIR$/src/Classes/Block.java" />
@@ -168,6 +326,7 @@
         <option value="$PROJECT_DIR$/src/Classes/Score.java" />
         <option value="$PROJECT_DIR$/src/Classes/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/Classes/EndGame.java" />
+        <option value="$PROJECT_DIR$/src/Classes/Arena.java" />
       </list>
     </option>
   </component>
@@ -190,10 +349,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="305" />
-    <option name="y" value="64" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -210,7 +368,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,17 +392,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -751,6 +909,9 @@
       <workItem from="1511874779621" duration="1842000" />
       <workItem from="1511878630125" duration="5754000" />
       <workItem from="1512032081687" duration="7229000" />
+      <workItem from="1512052293783" duration="3931000" />
+      <workItem from="1512061889790" duration="229000" />
+      <workItem from="1512062281312" duration="80000" />
     </task>
     <task id="LOCAL-00001" summary="Start of Project">
       <created>1510069998377</created>
@@ -763,42 +924,43 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66252000" />
+    <option name="totallyTimeSpent" value="70492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32666665" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32346722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32666665" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18230277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36510417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32657418" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="5.2083336E-4" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -854,14 +1016,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Classes/MainGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/Score.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -1201,11 +1355,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/Arena.java">
+    <entry file="file://$PROJECT_DIR$/src/Classes/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        <state relative-caret-position="493">
+          <caret line="38" column="80" lean-forward="false" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
+          <folding>
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classes/Movement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classes/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1227,56 +1402,193 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/CurrentBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
+        <state relative-caret-position="629">
           <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/Score.java">
+    <entry file="file://$PROJECT_DIR$/src/Classes/EndGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="38" column="80" lean-forward="false" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
+        <state relative-caret-position="221">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/Movement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/MainGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="34" />
+        <state relative-caret-position="663">
+          <caret line="44" column="116" lean-forward="false" selection-start-line="44" selection-start-column="116" selection-end-line="44" selection-end-column="116" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/MainMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/Classes/Arena.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/EndGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="51" column="24" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/src/Diagram.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="754.9005208333333" y="267.0">Classes.GreenBlock</node>
+            <node x="535.1643229166666" y="0.0">Classes.Block</node>
+            <node x="479.15052083333336" y="801.0">Classes.Arena</node>
+            <node x="356.90052083333336" y="267.0">Classes.BlueBlock</node>
+            <node x="10.5" y="900.0">Classes.EndGame</node>
+            <node x="372.65052083333336" y="1390.0">Classes.TetrisExample</node>
+            <node x="174.40052083333336" y="1212.0">Classes.Movement</node>
+            <node x="555.9005208333333" y="267.0">Classes.RedBlock</node>
+            <node x="87.22552083333335" y="500.0">Classes.Score</node>
+            <node x="204.40052083333336" y="1933.0">Classes.MainMenu</node>
+            <node x="157.65052083333336" y="1544.0">Classes.MainGame</node>
+            <node x="555.4005208333333" y="565.5">Classes.CurrentBlock</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Classes.MainMenu" target="Classes.TetrisExample">
+              <point x="85.0" y="-37.0" />
+              <point x="459.40052083333336" y="1908.0" />
+              <point x="493.65052083333336" y="1908.0" />
+              <point x="0.0" y="246.5" />
+            </edge>
+            <edge source="Classes.MainGame" target="Classes.Movement">
+              <point x="16.25" y="-92.5" />
+              <point x="271.40052083333336" y="1350.0" />
+              <point x="346.40052083333336" y="1350.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="Classes.Movement" target="Classes.Arena">
+              <point x="114.66666666666663" y="-59.0" />
+              <point x="461.0671875" y="1187.0" />
+              <point x="519.4838541666667" y="1187.0" />
+              <point x="-80.66666666666669" y="180.5" />
+            </edge>
+            <edge source="Classes.Arena" target="Classes.CurrentBlock">
+              <point x="0.0" y="-180.5" />
+              <point x="-44.75" y="60.0" />
+            </edge>
+            <edge source="Classes.CurrentBlock" target="Classes.Block">
+              <point x="-33.5625" y="-60.0" />
+              <point x="611.3380208333333" y="460.0" />
+              <point x="545.4005208333333" y="460.0" />
+              <point x="545.4005208333333" y="247.0" />
+              <point x="609.3309895833333" y="247.0" />
+              <point x="-14.833333333333314" y="103.5" />
+            </edge>
+            <edge source="Classes.Arena" target="Classes.Score">
+              <point x="-80.66666666666669" y="-180.5" />
+              <point x="519.4838541666667" y="781.0" />
+              <point x="290.6255208333333" y="781.0" />
+              <point x="90.39999999999998" y="125.5" />
+            </edge>
+            <edge source="Classes.MainGame" target="Classes.Score">
+              <point x="-81.25" y="-92.5" />
+              <point x="173.90052083333336" y="1370.0" />
+              <point x="0.0" y="1370.0" />
+              <point x="0.0" y="771.0" />
+              <point x="109.82552083333337" y="771.0" />
+              <point x="-90.39999999999998" y="125.5" />
+            </edge>
+            <edge source="Classes.GreenBlock" target="Classes.Block">
+              <point x="0.0" y="-81.5" />
+              <point x="843.9005208333333" y="237.0" />
+              <point x="698.3309895833333" y="237.0" />
+              <point x="74.16666666666669" y="103.5" />
+            </edge>
+            <edge source="Classes.CurrentBlock" target="Classes.BlueBlock">
+              <point x="-78.3125" y="-60.0" />
+              <point x="566.5880208333333" y="480.0" />
+              <point x="401.40052083333336" y="480.0" />
+              <point x="-44.5" y="81.5" />
+            </edge>
+            <edge source="Classes.RedBlock" target="Classes.Block">
+              <point x="0.0" y="-81.5" />
+              <point x="644.9005208333333" y="247.0" />
+              <point x="638.99765625" y="247.0" />
+              <point x="14.833333333333314" y="103.5" />
+            </edge>
+            <edge source="Classes.BlueBlock" target="Classes.Block">
+              <point x="0.0" y="-81.5" />
+              <point x="445.90052083333336" y="237.0" />
+              <point x="579.6643229166666" y="237.0" />
+              <point x="-44.5" y="103.5" />
+            </edge>
+            <edge source="Classes.Movement" target="Classes.Score">
+              <point x="-114.66666666666669" y="-59.0" />
+              <point x="231.73385416666667" y="1187.0" />
+              <point x="265.61223958333335" y="1187.0" />
+              <point x="265.61223958333335" y="781.0" />
+              <point x="245.4255208333334" y="781.0" />
+              <point x="45.200000000000045" y="125.5" />
+            </edge>
+            <edge source="Classes.EndGame" target="Classes.Score">
+              <point x="55.25" y="-81.5" />
+              <point x="176.25" y="781.0" />
+              <point x="200.22552083333335" y="781.0" />
+              <point x="0.0" y="125.5" />
+            </edge>
+            <edge source="Classes.Movement" target="Classes.Block">
+              <point x="0.0" y="-59.0" />
+              <point x="346.40052083333336" y="1187.0" />
+              <point x="329.25" y="1187.0" />
+              <point x="329.25" y="227.0" />
+              <point x="549.99765625" y="227.0" />
+              <point x="-74.16666666666669" y="103.5" />
+            </edge>
+            <edge source="Classes.MainGame" target="Classes.EndGame">
+              <point x="-16.25" y="-92.5" />
+              <point x="238.90052083333336" y="1350.0" />
+              <point x="126.5" y="1350.0" />
+              <point x="126.5" y="1187.0" />
+              <point x="176.25" y="1187.0" />
+              <point x="55.25" y="81.5" />
+            </edge>
+            <edge source="Classes.CurrentBlock" target="Classes.GreenBlock">
+              <point x="78.3125" y="-60.0" />
+              <point x="723.2130208333333" y="480.0" />
+              <point x="888.4005208333333" y="480.0" />
+              <point x="44.5" y="81.5" />
+            </edge>
+            <edge source="Classes.MainMenu" target="Classes.MainGame">
+              <point x="-85.0" y="-37.0" />
+              <point x="289.40052083333336" y="1908.0" />
+              <point x="255.15052083333336" y="1908.0" />
+              <point x="0.0" y="92.5" />
+            </edge>
+            <edge source="Classes.CurrentBlock" target="Classes.RedBlock">
+              <point x="11.1875" y="-60.0" />
+              <point x="656.0880208333333" y="450.0" />
+              <point x="689.4005208333333" y="450.0" />
+              <point x="44.5" y="81.5" />
+            </edge>
+            <edge source="Classes.MainGame" target="Classes.Arena">
+              <point x="48.75" y="-92.5" />
+              <point x="303.90052083333336" y="1360.0" />
+              <point x="634.9838541666667" y="1360.0" />
+              <point x="634.9838541666667" y="1187.0" />
+              <point x="600.1505208333333" y="1187.0" />
+              <point x="0.0" y="180.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.1" x="4397.333333333334" y="3561.1666666666665" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -1307,5 +1619,55 @@
         </settings>
       </state>
     </states>
+  </component>
+  <component name="simpleUML.UMLToolWindowPlugin">
+    <General>
+      <option name="birdViewUpdateDelay" value="2000" />
+      <option name="defaultFileLocation" value="file://$PROJECT_DIR$/.." />
+    </General>
+    <Classdiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="defaultFieldsExpanded" value="false" />
+      <option name="defaultContructorsExpanded" value="false" />
+      <option name="defaultMethodsExpanded" value="false" />
+      <option name="showParameters" value="true" />
+      <option name="showTooltip" value="true" />
+      <option name="showReturnValues" value="true" />
+      <option name="longModifier" value="true" />
+      <option name="implementsBehaviour" value="1" />
+      <option name="extendsBehaviour" value="1" />
+      <option name="compartmentBehaviour" value="1" />
+      <option name="interfaceBackgroundColor" value="-6494306" />
+      <option name="abstractClassBackgroundColor" value="-1580132" />
+      <option name="classBackgroundColor" value="-6508057" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="quickSourceLinkColor" value="-16776961" />
+      <option name="quickDiagramLinkColor" value="-8454144" />
+      <option name="drawDecorations" value="false" />
+      <option name="hideFieldList" value="" />
+      <option name="showFieldList" value="" />
+      <option name="hideConstructorList" value="" />
+      <option name="showConstructorList" value="" />
+      <option name="hideMethodList" value="" />
+      <option name="showMethodList" value="" />
+      <option name="minimumFigureSize" value="0,0" />
+    </Classdiagram>
+    <Dependencydiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="0" />
+    </Dependencydiagram>
+    <Packagediagram>
+      <option name="diagramTitleFont" value="SansSerif,0,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="packageBackgroundColor" value="-4144960" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="2" />
+    </Packagediagram>
   </component>
 </project>
