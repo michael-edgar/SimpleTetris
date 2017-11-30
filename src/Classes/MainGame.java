@@ -107,6 +107,7 @@ public class MainGame{
 
                             if(game.getWallOfArena()[game.getCurrentX()][game.getCurrentY()] == Color.GRAY)
                             {
+                                    System.out.print("Lose Time \n");
                                     losing.youLose(gameScore, gameArena);
                                     break;
                             }
@@ -124,9 +125,17 @@ public class MainGame{
     {
         if (elapsedSeconds%5 == 0)
         {
-            if(gameSpeed > 0)
+            if(gameSpeed > 100)
             {
-                gameSpeed -= 10;
+                gameSpeed -= 50;
+                System.out.print("gameSpeed: " +gameSpeed+ "\nElapsed Seconds: " +elapsedSeconds+ "\n");
+            }
+        }
+        else if (elapsedSeconds%10 == 0)
+        {
+            if(gameSpeed < 100 && gameSpeed > 10)
+            {
+                gameSpeed -= 5;
                 System.out.print("gameSpeed: " +gameSpeed+ "\nElapsed Seconds: " +elapsedSeconds+ "\n");
             }
         }

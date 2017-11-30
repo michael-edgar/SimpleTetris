@@ -16,8 +16,6 @@ public class BlueBlock extends Block{
 
     public Color getColour() { return blockColour;}
 
-    public Block getBlockType() {return thisBlock;}
-
     public int getBlockScore() {
         return scoreValue;
     }

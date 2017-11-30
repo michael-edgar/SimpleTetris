@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class Score implements Serializable{
     private int currentScore = 0;
     private int highScore = 0;
+    private String name;
 
     //Accessor methods
     public int getCurrentScore() {
@@ -20,8 +21,9 @@ public class Score implements Serializable{
         this.currentScore += currentScore;
     }
 
-    public void setHighScore(int highScore) {
+    public void setHighScore(int highScore, String name) {
         this.highScore = highScore;
+        this.name = name;
     }
 
     public String toString()

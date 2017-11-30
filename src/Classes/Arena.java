@@ -17,13 +17,13 @@ public class Arena extends JPanel{
                 if(i == 0 || i == 8 || j == 11) {
                     wallOfArena[i][j] = Color.GRAY;
                 }
-                else if(j == 10 && i == 3) {
+                else if(j == 10 && i == 2) {
                     wallOfArena[i][j] = Color.BLUE;
                 }
                 else if(j == 10 && i == 4) {
                     wallOfArena[i][j] = Color.RED;
                 }
-                else if(j == 10 && i == 5) {
+                else if(j == 10 && i == 6) {
                     wallOfArena[i][j] = Color.GREEN;
                 }
                 else {

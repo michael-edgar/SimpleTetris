@@ -16,8 +16,6 @@ public abstract class Block {
 
     public abstract void setBlockScore();
 
-    public abstract Block getBlockType();
-
     public abstract int getBlockScore();
 
     public abstract Color getColour();

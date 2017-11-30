@@ -40,7 +40,7 @@ public class Movement{
     {
         if(thisBlock.getColour() == Color.BLUE)
         {
-            if(currentX == 3 && currentY == 9)
+            if(currentX == 2 && currentY == 9)
             {
                 arenaWall[currentX][currentY] = Color.BLACK;
                 game.setCurrent(4,0);
@@ -68,7 +68,7 @@ public class Movement{
 
         else
         {
-            if(currentX == 5 && currentY == 9)
+            if(currentX == 6 && currentY == 9)
             {
                 arenaWall[currentX][currentY] = Color.BLACK;
                 game.setCurrent(4,0);
